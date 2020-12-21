@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+
+<body>
+    <nav class=" red accent-3">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">WEATHER</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">HOME</a></li>
+                    <li class="active"><a href="/about">ABOUT</a></li>
+                    <li><a href="/help">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/help">HELP</a></li>
+    </ul>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col l5 m5 s12  center-on-small-only">
+                    <div class="image-container">
+                        <img class="picc" src="/img/weather.png">
+                    </div>
+                </div>
+                <div class="col l7 m7 s12">
+                    <div id="intro">
+                        <p class="center">This is a simple node js weather appilcation</p>
+                        <p class="center">This app uses two api namely mapbox and weather stack</p>
+                        <p class="center">The mapbox api converts the given address into coordinates such as lattitude
+                            and longitude</p>
+                        <p class="center">Those lattitude and longitude are passed into weather stack api to get the
+                            weather forecast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{>footer}}
+</body>
+
+</html>

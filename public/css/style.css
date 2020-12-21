@@ -1,0 +1,39 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#about {
+  margin-top: 100px;
+}
+
+.title {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+}
+.content {
+  font-size: 1.2rem;
+}
+
+#help {
+  margin-top: 100px;
+  line-height: 30px;
+}
+
+#error {
+  margin-top: 100px;
+  line-height: 30px;
+}
+.picc {
+  width: 80%;
+  height: 70%;
+  border-radius: 20%;
+  border: 2px solid #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.mt {
+  margin-top: 50px;
+}
+footer {
+  margin-top: 500px;
+}
