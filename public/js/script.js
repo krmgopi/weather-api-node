@@ -18,18 +18,17 @@ function fetchWeather(e) {
     weatherDetails.innerHTML =
       "<img src='../img/spinner.gif' height='150px' width='150px' alt='loading' />";
     console.log(address.value);
-    fetch(`http://localhost:3000/weather?address=${address.value}`).then(
-      (response) => {
-        response.json().then((data) => {
-          if (data.error) {
-            weatherDetails.innerHTML = `
+    fetch(`/weather?address=${address.value}`).then((response) => {
+      response.json().then((data) => {
+        if (data.error) {
+          weatherDetails.innerHTML = `
             <ul class="col m6 offset-m3  s12 collection center">
             <li class="collection-item"><span class="red-text">OOPS! Something went wrong, ${data.error}</span></li>
             </ul>`;
-            console.log("something went wrong");
-            console.log(data.error);
-          } else {
-            weatherDetails.innerHTML = `
+          console.log("something went wrong");
+          console.log(data.error);
+        } else {
+          weatherDetails.innerHTML = `
             <ul class="content col m6 offset-m3  s12 collection center">
             <li class="collection-item">Location: <span class="green-text">${data.location}</span></li>
             <li class="collection-item">Country: <span class="green-text">${data.forecast.country}</span></li>
@@ -43,11 +42,10 @@ function fetchWeather(e) {
             <li class="collection-item">Is Day: <span class="green-text">${data.forecast.isDay}</span></li>
             <li class="collection-item">Description: <span class="green-text">${data.forecast.desc}</span></li>
             </ul>`;
-            console.log(data);
-          }
-        });
-      }
-    );
+          console.log(data);
+        }
+      });
+    });
   } else {
     alert("no spaces, numbers, and special charecters allowed");
   }
